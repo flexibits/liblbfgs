@@ -12,7 +12,12 @@ else
     FORCE_MISSING=
 fi
 
-libtoolize --copy $FORCE 2>&1 | sed '/^You should/d' || {
+libtoolize=libtoolize
+if which glibtoolize > /dev/null 2>&1; then
+    libtoolize=glibtoolize
+fi
+
+$libtoolize --copy $FORCE 2>&1 | sed '/^You should/d' || {
     echo "libtoolize failed!"
     exit 1
 }

@@ -1,0 +1,240 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3702220514C5056500052F88 /* arithmetic_ansi.h in Headers */ = {isa = PBXBuildFile; fileRef = 3702220114C5056500052F88 /* arithmetic_ansi.h */; };
+		3702220614C5056500052F88 /* arithmetic_sse_double.h in Headers */ = {isa = PBXBuildFile; fileRef = 3702220214C5056500052F88 /* arithmetic_sse_double.h */; };
+		3702220714C5056500052F88 /* arithmetic_sse_float.h in Headers */ = {isa = PBXBuildFile; fileRef = 3702220314C5056500052F88 /* arithmetic_sse_float.h */; };
+		3702220814C5056500052F88 /* lbfgs.c in Sources */ = {isa = PBXBuildFile; fileRef = 3702220414C5056500052F88 /* lbfgs.c */; };
+		3702220A14C5056C00052F88 /* lbfgs.h in Headers */ = {isa = PBXBuildFile; fileRef = 3702220914C5056C00052F88 /* lbfgs.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		370221FA14C504FF00052F88 /* liblbfgs.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = liblbfgs.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		3702220114C5056500052F88 /* arithmetic_ansi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = arithmetic_ansi.h; path = lib/arithmetic_ansi.h; sourceTree = "<group>"; };
+		3702220214C5056500052F88 /* arithmetic_sse_double.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = arithmetic_sse_double.h; path = lib/arithmetic_sse_double.h; sourceTree = "<group>"; };
+		3702220314C5056500052F88 /* arithmetic_sse_float.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = arithmetic_sse_float.h; path = lib/arithmetic_sse_float.h; sourceTree = "<group>"; };
+		3702220414C5056500052F88 /* lbfgs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lbfgs.c; path = lib/lbfgs.c; sourceTree = "<group>"; };
+		3702220914C5056C00052F88 /* lbfgs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lbfgs.h; path = include/lbfgs.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		370221F714C504FF00052F88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		370221EA14C504B400052F88 = {
+			isa = PBXGroup;
+			children = (
+				3702220014C5052C00052F88 /* Source */,
+				370221FB14C504FF00052F88 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		370221FB14C504FF00052F88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				370221FA14C504FF00052F88 /* liblbfgs.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3702220014C5052C00052F88 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				3702220114C5056500052F88 /* arithmetic_ansi.h */,
+				3702220214C5056500052F88 /* arithmetic_sse_double.h */,
+				3702220314C5056500052F88 /* arithmetic_sse_float.h */,
+				3702220914C5056C00052F88 /* lbfgs.h */,
+				3702220414C5056500052F88 /* lbfgs.c */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		370221F814C504FF00052F88 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3702220514C5056500052F88 /* arithmetic_ansi.h in Headers */,
+				3702220614C5056500052F88 /* arithmetic_sse_double.h in Headers */,
+				3702220714C5056500052F88 /* arithmetic_sse_float.h in Headers */,
+				3702220A14C5056C00052F88 /* lbfgs.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		370221F914C504FF00052F88 /* lbfgs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 370221FE14C504FF00052F88 /* Build configuration list for PBXNativeTarget "lbfgs" */;
+			buildPhases = (
+				3702220B14C5057C00052F88 /* Run Configure Script */,
+				370221F614C504FF00052F88 /* Sources */,
+				370221F714C504FF00052F88 /* Frameworks */,
+				370221F814C504FF00052F88 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = lbfgs;
+			productName = lbfgs;
+			productReference = 370221FA14C504FF00052F88 /* liblbfgs.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		370221EC14C504B400052F88 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 370221EF14C504B400052F88 /* Build configuration list for PBXProject "liblbfgs" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 370221EA14C504B400052F88;
+			productRefGroup = 370221FB14C504FF00052F88 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				370221F914C504FF00052F88 /* lbfgs */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3702220B14C5057C00052F88 /* Run Configure Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Configure Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sh \"$SRCROOT\"/autogen.sh > /dev/null 2>&1\n\"$SRCROOT\"/configure --enable-sse2";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		370221F614C504FF00052F88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3702220814C5056500052F88 /* lbfgs.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		370221F114C504B400052F88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		370221F214C504B400052F88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		370221FC14C504FF00052F88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		370221FD14C504FF00052F88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		370221EF14C504B400052F88 /* Build configuration list for PBXProject "liblbfgs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				370221F114C504B400052F88 /* Debug */,
+				370221F214C504B400052F88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		370221FE14C504FF00052F88 /* Build configuration list for PBXNativeTarget "lbfgs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				370221FC14C504FF00052F88 /* Debug */,
+				370221FD14C504FF00052F88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 370221EC14C504B400052F88 /* Project object */;
+}
