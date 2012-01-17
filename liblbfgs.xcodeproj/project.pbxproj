@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		370221FA14C504FF00052F88 /* liblbfgs.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = liblbfgs.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		370221FA14C504FF00052F88 /* liblbfgs-1.10.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "liblbfgs-1.10.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3702220114C5056500052F88 /* arithmetic_ansi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = arithmetic_ansi.h; path = lib/arithmetic_ansi.h; sourceTree = "<group>"; };
 		3702220214C5056500052F88 /* arithmetic_sse_double.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = arithmetic_sse_double.h; path = lib/arithmetic_sse_double.h; sourceTree = "<group>"; };
 		3702220314C5056500052F88 /* arithmetic_sse_float.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = arithmetic_sse_float.h; path = lib/arithmetic_sse_float.h; sourceTree = "<group>"; };
@@ -45,7 +45,7 @@
 		370221FB14C504FF00052F88 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				370221FA14C504FF00052F88 /* liblbfgs.dylib */,
+				370221FA14C504FF00052F88 /* liblbfgs-1.10.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,7 +94,7 @@
 			);
 			name = lbfgs;
 			productName = lbfgs;
-			productReference = 370221FA14C504FF00052F88 /* liblbfgs.dylib */;
+			productReference = 370221FA14C504FF00052F88 /* liblbfgs-1.10.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
@@ -135,7 +135,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "sh \"$SRCROOT\"/autogen.sh > /dev/null 2>&1\n\"$SRCROOT\"/configure --enable-sse2";
+			shellScript = "if [ ! -f configure ]; then \n  sh \"$SRCROOT\"/autogen.sh > /dev/null 2>&1\nfi \n\nif [ ! -e \"$SRCROOT\"/config.h ]; then\n  \"$SRCROOT\"/configure --enable-sse2\nfi";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -170,6 +170,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1.1.0;
+				DYLIB_CURRENT_VERSION = 1.1.0;
 				EXECUTABLE_PREFIX = lib;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -185,9 +187,10 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "@loader_path";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME)-1.10";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -199,6 +202,8 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1.1.0;
+				DYLIB_CURRENT_VERSION = 1.1.0;
 				EXECUTABLE_PREFIX = lib;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -207,8 +212,9 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INSTALL_PATH = "@loader_path";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME)-1.10";
 				SDKROOT = macosx;
 			};
 			name = Release;
