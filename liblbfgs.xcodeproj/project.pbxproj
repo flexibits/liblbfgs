@@ -11,7 +11,7 @@
 		3702220614C5056500052F88 /* arithmetic_sse_double.h in Headers */ = {isa = PBXBuildFile; fileRef = 3702220214C5056500052F88 /* arithmetic_sse_double.h */; };
 		3702220714C5056500052F88 /* arithmetic_sse_float.h in Headers */ = {isa = PBXBuildFile; fileRef = 3702220314C5056500052F88 /* arithmetic_sse_float.h */; };
 		3702220814C5056500052F88 /* lbfgs.c in Sources */ = {isa = PBXBuildFile; fileRef = 3702220414C5056500052F88 /* lbfgs.c */; };
-		3702220A14C5056C00052F88 /* lbfgs.h in Headers */ = {isa = PBXBuildFile; fileRef = 3702220914C5056C00052F88 /* lbfgs.h */; };
+		3702220A14C5056C00052F88 /* lbfgs.h in Headers */ = {isa = PBXBuildFile; fileRef = 3702220914C5056C00052F88 /* lbfgs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,10 +69,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3702220A14C5056C00052F88 /* lbfgs.h in Headers */,
 				3702220514C5056500052F88 /* arithmetic_ansi.h in Headers */,
 				3702220614C5056500052F88 /* arithmetic_sse_double.h in Headers */,
 				3702220714C5056500052F88 /* arithmetic_sse_float.h in Headers */,
-				3702220A14C5056C00052F88 /* lbfgs.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
