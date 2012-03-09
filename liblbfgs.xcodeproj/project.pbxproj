@@ -135,7 +135,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ ! -f configure ]; then \n  sh \"$SRCROOT\"/autogen.sh > /dev/null 2>&1\nfi \n\nif [ ! -e \"$SRCROOT\"/config.h ]; then\n  \"$SRCROOT\"/configure --enable-sse2\nfi";
+			shellScript = "#autoconf/automake/libtool need to be installed\nPATH=$PATH:/usr/local/bin\n\nif [ ! -f \"$SRCROOT\"/configure ]; then \n  sh \"$SRCROOT\"/autogen.sh > /dev/null 2>&1\nfi \n\nif [ ! -e \"$SRCROOT\"/config.h ]; then\n  \"$SRCROOT\"/configure --enable-sse2\nfi";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
